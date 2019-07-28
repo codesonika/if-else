@@ -14,13 +14,13 @@ using namespace std;
 int main()
 
 {
-//Description: Kilometer1, kilometer2, and litres are to be input from user. Gallon, distance, distance, miles, and MPG are to be calculated values. 
+//Description: Kilometer1, kilometer2, and litres are to be input from user. Gallon, distance in km, distance in miles, and MPG are to be calculated values. 
   int kilometer1;
   int kilometer2;
   int litres;
   double gallon;
   double distance;
-  double miles;;
+  double miles;
   double MPG;
   
 //It format to 2 decimals
@@ -36,17 +36,12 @@ int main()
   cout<<" Enter the number of kilometer car has travelled:  ";
 //assign input as kilometer1
   cin>> kilometer2;
-
-
-  if (kilometer2<kilometer1)
-    cout<<"Enter number of kilometer travelled by car!!!: ";
-    cin>>kilometer2;
-  else
-    cin>>kilometer2;
   
 //calculate distance travelled by car
-  distance=(kilometer2-kilometer1);
-
+ if(kilometer1<kilometer2)
+ distance=(kilometer2-kilometer1);
+ else
+ distance=(kilometer1-kilometer2);
 //output distance travelled by a car 
   cout<<" Distance travelled by a car: "<<distance<<endl;
 
@@ -55,12 +50,12 @@ int main()
   cout<<"Distance travlled by a car in miles: "<<miles<<endl;
   
 
-  cout<<" Enter the number of gasoline used in litres: ";
+  cout<<" Enter the amount of gasoline used in litres: ";
   cin >>litres;
 
 //convert litres into gallon
   gallon=litres/3.78541;
-  cout<<" Gallon used while travelling: "<<gallon<<endl;
+  cout<<" Gallon of gasoline used while travelling: "<<gallon<<endl;
  
 
 //calculate MPG(miles per gallon)
